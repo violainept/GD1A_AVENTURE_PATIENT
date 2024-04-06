@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
+
+//////////// Variables ////////////
+
     [Header("Configurations")]
     [SerializeField] private PlayerStats stats;
 
+    private PlayerAnimations playerAnimations;
+
+    private void Awake()
+    {
+        playerAnimations = GetComponent<PlayerAnimations>();
+    }
+
+    // A RETIRER
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -14,6 +25,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             TakeDamage(1f);
         }
     }
+
+//////////// Damage ////////////
     public void TakeDamage(float amount)
     {
         stats.Health -= amount;
@@ -23,8 +36,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
-    private void PlayerDead()
+//////////// Death ////////////
+    public void PlayerDead()
     {
-        Debug.Log("Dead.");
+        playerAnimations.SetDeadAnimation();
     }
 }

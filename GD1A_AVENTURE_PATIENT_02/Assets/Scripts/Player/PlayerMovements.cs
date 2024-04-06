@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerMovements : MonoBehaviour
 {
-    //////////// Variables ////////////
+
+//////////// Variables ////////////
 
     [Header("Configurations")]
     [SerializeField] private float moveSpeed;
 
+    private Player player;
     private PlayerAnimations playerAnimations;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -18,16 +20,23 @@ public class PlayerMovements : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerAnimations = GetComponent<PlayerAnimations>();
+        player = GetComponent<Player>();
     }
 
-    void Update()
+    private void Update()
     {
         ReadMovement();
     }
 
     private void FixedUpdate()
     {
-        // Move player //
+        Move();
+    }
+
+//////////// Movements ////////////
+    private void Move()
+    {
+        if (player.Stats.Health <= 0) return;
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -36,7 +45,7 @@ public class PlayerMovements : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Can't move diagonally //
+        // Can't move diagonally
         if (movement.x != 0)
         {
             movement.y = 0;
@@ -46,10 +55,14 @@ public class PlayerMovements : MonoBehaviour
             movement.x = 0;
         }
 
+//////////// Animations ////////////
+
+        // Idle 
         if (movement != Vector2.zero)
         {
             playerAnimations.SetIdleAnimation(movement);
         }
+        // Movements
             playerAnimations.SetMovingAnimation(movement);
 
     }
