@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-//////////// Variables ////////////
+    //////////// Variables ////////////
 
     [Header("Configurations")]
     [SerializeField] private PlayerStats stats;
-
-    // Allows to use stats
-    public PlayerStats Stats => stats;
+    public PlayerStats Stats => stats; // Allows to use stats
 
     private PlayerAnimations animations;
 
