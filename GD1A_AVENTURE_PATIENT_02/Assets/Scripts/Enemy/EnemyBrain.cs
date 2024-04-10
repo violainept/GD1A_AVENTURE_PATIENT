@@ -9,7 +9,7 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] private string initState;
     [SerializeField] private FSMState[] states; // Keep all states with actions and decisions 
     public FSMState CurrentState {  get;  set; }
-    public Transform Player { get; set; } // A DEFINIR
+    public Transform Player;
 
  
 
@@ -21,6 +21,7 @@ public class EnemyBrain : MonoBehaviour
     private void Update()
     {
         CurrentState?.UpdateState(this); // Note : Same as     if (CurrentState == null) return;
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public void ChangeState(string newStateId)

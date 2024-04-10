@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 23901639}
   - component: {fileID: 23901645}
   - component: {fileID: 23901644}
+  - component: {fileID: 23901646}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -380,6 +381,23 @@ MonoBehaviour:
     Actions:
     - {fileID: 23901644}
     Transitions: []
+  Player: {fileID: 0}
+--- !u!114 &23901646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23901638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a92b355dcc08424691675c1fb53baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &82868119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1765,7 @@ GameObject:
   - component: {fileID: 787122753}
   - component: {fileID: 787122752}
   - component: {fileID: 787122754}
+  - component: {fileID: 787122755}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -1922,6 +1941,7 @@ MonoBehaviour:
     Actions:
     - {fileID: 787122754}
     Transitions: []
+  Player: {fileID: 0}
 --- !u!114 &787122753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,6 +1972,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+--- !u!114 &787122755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787122745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a92b355dcc08424691675c1fb53baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &882046118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2148,7 @@ GameObject:
   - component: {fileID: 1074545538}
   - component: {fileID: 1074545544}
   - component: {fileID: 1074545543}
+  - component: {fileID: 1074545545}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -2302,6 +2339,23 @@ MonoBehaviour:
     Actions:
     - {fileID: 1074545543}
     Transitions: []
+  Player: {fileID: 0}
+--- !u!114 &1074545545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074545537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a92b355dcc08424691675c1fb53baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1133096785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,8 +2370,9 @@ GameObject:
   - component: {fileID: 1133096787}
   - component: {fileID: 1133096786}
   - component: {fileID: 1133096792}
-  - component: {fileID: 1133096791}
   - component: {fileID: 1133096793}
+  - component: {fileID: 1133096791}
+  - component: {fileID: 1133096794}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -2512,11 +2567,13 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 1133096794}
     Transitions:
     - Decision: {fileID: 1133096793}
       TrueState: 
       FalseState: Wander
+  Player: {fileID: 137929035}
 --- !u!114 &1133096793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2533,6 +2590,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1133096794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133096785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb35e97c75e9fa4fbbb503c72857d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &1218051913
 GameObject:
   m_ObjectHideFlags: 0
