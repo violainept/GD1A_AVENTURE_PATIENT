@@ -502,13 +502,13 @@ GameObject:
   - component: {fileID: 137929036}
   - component: {fileID: 137929039}
   - component: {fileID: 137929038}
+  - component: {fileID: 137929032}
   - component: {fileID: 137929037}
   - component: {fileID: 137929041}
   - component: {fileID: 137929040}
-  - component: {fileID: 137929032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1744,9 +1744,9 @@ GameObject:
   - component: {fileID: 787122748}
   - component: {fileID: 787122747}
   - component: {fileID: 787122746}
-  - component: {fileID: 787122752}
-  - component: {fileID: 787122751}
   - component: {fileID: 787122753}
+  - component: {fileID: 787122752}
+  - component: {fileID: 787122754}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -1898,27 +1898,12 @@ Transform:
   m_GameObject: {fileID: 787122745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.65, y: 0.39, z: 0}
+  m_LocalPosition: {x: 5.43, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 583311799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &787122751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787122745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e20f2cf864291f4a94c9d20aca38ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
 --- !u!114 &787122752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,11 +1916,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddf1deda250c3649849717456d80d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 787122751}
+    - {fileID: 787122754}
     Transitions: []
 --- !u!114 &787122753
 MonoBehaviour:
@@ -1949,7 +1934,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b8621993338554482dd17e0b2a6744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  points:
+  - {x: 1, y: 0, z: 0}
+  - {x: 4, y: 0, z: 0}
+  - {x: 4, y: -2, z: 0}
+  - {x: 1, y: -2, z: 0}
+--- !u!114 &787122754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787122745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41a7554e215824faa63793a82fc4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
 --- !u!1 &882046118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2317,7 @@ GameObject:
   - component: {fileID: 1133096786}
   - component: {fileID: 1133096792}
   - component: {fileID: 1133096791}
+  - component: {fileID: 1133096793}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -2466,7 +2469,7 @@ Transform:
   m_GameObject: {fileID: 1133096785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.86, y: -4.86, z: 0}
+  m_LocalPosition: {x: 8.84, y: -5.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2504,7 +2507,32 @@ MonoBehaviour:
   - ID: Wander
     Actions:
     - {fileID: 1133096791}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 1133096793}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 1133096793}
+      TrueState: 
+      FalseState: Wander
+--- !u!114 &1133096793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133096785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a92b355dcc08424691675c1fb53baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1218051913
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 
 public class EnemyBrain : MonoBehaviour
 {
+
     [SerializeField] private string initState;
     [SerializeField] private FSMState[] states; // Keep all states with actions and decisions 
     public FSMState CurrentState {  get;  set; }
+    public Transform Player { get; set; } // A DEFINIR
+
+ 
 
     private void Start()
     {

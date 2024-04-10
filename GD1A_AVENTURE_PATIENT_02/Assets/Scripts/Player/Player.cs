@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //////////// Variables ////////////
-
     [Header("Configurations")]
     [SerializeField] private PlayerStats stats;
     public PlayerStats Stats => stats; // Allows to use stats
@@ -16,7 +14,7 @@ public class Player : MonoBehaviour
     {
         animations = GetComponent<PlayerAnimations>();
     }
-    public void ResetPlayer()
+    public void ResetPlayer() // Reset all informations about Player (health, mana, experience...)
     {
         stats.ResetPlayer();
         animations.ResetPlayer();

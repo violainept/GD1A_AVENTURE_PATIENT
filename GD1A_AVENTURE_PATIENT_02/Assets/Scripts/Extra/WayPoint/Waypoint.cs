@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Define where to stop during a patrol
 public class WayPoint : MonoBehaviour
 {
     [Header("Configurations")]
@@ -15,6 +16,12 @@ public class WayPoint : MonoBehaviour
     private void Start()
     {
         EntityPosition = transform.position;
+        gameStarted = true;
+    }
+
+    public Vector3 GetPosition(int pointIndex) // Get new position
+    {
+        return EntityPosition + points[pointIndex];
     }
 
     private void OnDrawGizmos()

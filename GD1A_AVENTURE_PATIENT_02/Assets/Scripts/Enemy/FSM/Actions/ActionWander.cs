@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Define how to move to random position in a define area
 public class ActionWander : FSMAction
 {
     [Header("Configurations")]
