@@ -17,26 +17,30 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         playerAnimations = GetComponent<PlayerAnimations>();
     }
 
-    // A RETIRER
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TakeDamage(1f);
-        }
-    }
-
-//////////// Damage ////////////
-    public void TakeDamage(float amount)
-    {
-        stats.Health -= amount;
         if (stats.Health <= 0f)
         {
             PlayerDead();
         }
     }
 
-//////////// Death ////////////
+    public void TakeDamage(float amount)
+    {   
+        if (stats.Health <= 0f)
+        {
+            return;
+        }
+
+        stats.Health -= amount;
+        DamageManager.Instance.ShowDamageText(amount, transform);
+        if (stats.Health <= 0f)
+        {
+            stats.Health = 0f;
+            PlayerDead();
+        }
+    }
+
     public void PlayerDead()
     {
         playerAnimations.SetDeadAnimation();

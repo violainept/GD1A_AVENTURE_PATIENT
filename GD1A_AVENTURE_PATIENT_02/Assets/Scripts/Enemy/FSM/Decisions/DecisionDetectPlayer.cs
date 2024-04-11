@@ -25,11 +25,11 @@ public class DecisionDetectPlayer : FSMDecision
        
         if (playerCollider != null) // Player detected
         {
-            enemy.Player = playerCollider.transform;
+            enemy.player = playerCollider.transform;
             return true;
         }
 
-        enemy.Player = null;
+        enemy.player = null;
         return false;
     }
     private void OnDrawGizmosSelected() // Visual range

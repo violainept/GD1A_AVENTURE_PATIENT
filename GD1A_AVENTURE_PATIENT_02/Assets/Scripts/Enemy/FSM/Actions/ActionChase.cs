@@ -21,11 +21,11 @@ public class ActionChase : FSMAction
 
     private void ChasePlayer()
     {
-        if (enemyBrain.Player == null)
+        if (enemyBrain.player == null)
         {
             return;
         }
-        Vector3 dirToPlayer = enemyBrain.Player.position - transform.position;
+        Vector3 dirToPlayer = enemyBrain.player.position - transform.position;
         if (dirToPlayer.magnitude >= 1.3f)
         {
             transform.Translate(dirToPlayer.normalized * (chaseSpeed * Time.deltaTime));
