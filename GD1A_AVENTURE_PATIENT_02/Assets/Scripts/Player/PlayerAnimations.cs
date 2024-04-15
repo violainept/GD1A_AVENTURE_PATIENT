@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-
-//////////// Variables ////////////
-
     private readonly int horizontal = Animator.StringToHash("Horizontal");
     private readonly int vertical = Animator.StringToHash("Vertical");
     private readonly int lastHorizontal = Animator.StringToHash("LastHorizontal");
@@ -14,36 +11,40 @@ public class PlayerAnimations : MonoBehaviour
     private readonly int speed = Animator.StringToHash("Speed");
     private readonly int dead = Animator.StringToHash("Dead");
     private readonly int revive = Animator.StringToHash("Revive");
+    private readonly int attacking = Animator.StringToHash("Attacking");
+
 
     private Animator animator;
 
-//////////// Animations ////////////
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    // Dead 
-    public void SetDeadAnimation()
+    public void SetIdleAnimation(Vector2 dir) // Player is motionless
     {
-        animator.SetTrigger(dead);
+        animator.SetFloat(lastHorizontal, dir.x);
+        animator.SetFloat(lastVertical, dir.y);
     }
 
-    // Movements 
-    public void SetMovingAnimation(Vector2 dir)
+    public void SetMovingAnimation(Vector2 dir) // Player is moving
     {
         animator.SetFloat(horizontal, dir.x);
         animator.SetFloat(vertical, dir.y);
         animator.SetFloat(speed, dir.sqrMagnitude);
     }
 
-    // Idle 
-    public void SetIdleAnimation(Vector2 dir)
+    public void SetAttackAnimation(bool value) // Player is attacking
     {
-        animator.SetFloat(lastHorizontal, dir.x);
-        animator.SetFloat(lastVertical, dir.y);
+        animator.SetBool(attacking, value);
     }
 
+    public void SetDeadAnimation() // Player is dead
+    {
+        animator.SetTrigger(dead);
+    }
+
+    // A REVOIR
     public void ResetPlayer()
     {
         SetMovingAnimation(Vector2.down);

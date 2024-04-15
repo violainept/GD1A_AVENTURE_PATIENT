@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DecisionAttackRange : FSMDecision
 {
-    [Header("Configurations")]
+    [Header("Config")]
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask playerMask;
 
@@ -14,9 +15,10 @@ public class DecisionAttackRange : FSMDecision
     {
         enemy = GetComponent<EnemyBrain>();
     }
+
     public override bool Decide()
     {
-        throw new System.NotImplementedException();
+        return PlayerInAttackRange();
     }
 
     private bool PlayerInAttackRange()
@@ -26,11 +28,12 @@ public class DecisionAttackRange : FSMDecision
             return false;
         }
         Collider2D playerCollider = Physics2D.OverlapCircle(enemy.transform.position, attackRange, playerMask);
-        if (playerCollider != null)
-
+        
+        if (playerCollider != null) // Player detected
         {
             return true;
         }
+
         return false;
     }
 

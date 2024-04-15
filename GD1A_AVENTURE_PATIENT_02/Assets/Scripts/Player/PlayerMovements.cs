@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerMovements : MonoBehaviour
 {
 
-//////////// Variables ////////////
-
     [Header("Configurations")]
     [SerializeField] private float moveSpeed;
 
@@ -33,8 +31,7 @@ public class PlayerMovements : MonoBehaviour
         Move();
     }
 
-//////////// Movements ////////////
-    private void Move()
+    private void Move() // Player movements
     {
         if (player.Stats.Health <= 0) return;
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -55,15 +52,11 @@ public class PlayerMovements : MonoBehaviour
             movement.x = 0;
         }
 
-//////////// Animations ////////////
-
-        // Idle 
-        if (movement != Vector2.zero)
+        if (movement != Vector2.zero) // Player is motionless
         {
             playerAnimations.SetIdleAnimation(movement);
         }
-        // Movements
-            playerAnimations.SetMovingAnimation(movement);
+            playerAnimations.SetMovingAnimation(movement); // Player is moving
 
     }
 }

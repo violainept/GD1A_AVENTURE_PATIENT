@@ -5,7 +5,7 @@ using UnityEngine;
 
 [CustomEditor(typeof(PlayerStats))]
 
-// Allow to modify PlayerStats : make a button appear, using the desired script
+// Allows to modify PlayerStats
 public class PlayerStatsEditor : Editor
 {
     private PlayerStats StatsTarget => target as PlayerStats;
