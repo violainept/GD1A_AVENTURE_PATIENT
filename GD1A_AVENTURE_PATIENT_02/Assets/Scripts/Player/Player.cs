@@ -9,13 +9,33 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStats stats;
 
     public int previousSceneIndex;
-    public PlayerStats Stats => stats; // Allows to use stats
-    
+    public PlayerStats Stats => stats; // Allows to use Player stats
+
+    // A retirer
+    [Header("Test")]
+    public ItemFoodDrinks FoodDrinks;
+
+    public PlayerMana PlayerMana { get; private set; }
+    public PlayerHealth PlayerHealth { get; private set; }
+
     private PlayerAnimations animations;
 
     private void Awake()
     {
+        PlayerMana = GetComponent<PlayerMana>();
+        PlayerHealth = GetComponent<PlayerHealth>();
         animations = GetComponent<PlayerAnimations>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (FoodDrinks.UseItem())
+            {
+                Debug.Log("Using Food or Drinks.");
+            }
+        }
     }
     public void ResetPlayer() // Reset all stats
     {
