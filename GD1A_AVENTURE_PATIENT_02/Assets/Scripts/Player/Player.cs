@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     // A retirer
     [Header("Test")]
-    public ItemFoodDrinks FoodDrinks;
+    public ItemHealthPotion HealthPotion;
 
     public PlayerMana PlayerMana { get; private set; }
     public PlayerHealth PlayerHealth { get; private set; }
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            if (FoodDrinks.UseItem())
+            if (HealthPotion.UseItem())
             {
                 Debug.Log("Using Food or Drinks.");
             }

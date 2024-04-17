@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb6683be6a3d1304a90021d66eb033ef, type: 3}
-  m_Name: ItemFoodDrinks
+  m_Name: ItemHealthPotion
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: e9af621118512714da8e34a0c0b1dab8, type: 3}
-  ID: FoodandDrinks
-  Name: Food and Drinks
-  Description: Food/Drinks recover 2 HP.
+  Icon: {fileID: 0}
+  ID: HealthPotion
+  Name: Health Potion
+  Description: Recovers 2 HP.
   itemType: 1
   isConsumable: 1
   isStackable: 1
