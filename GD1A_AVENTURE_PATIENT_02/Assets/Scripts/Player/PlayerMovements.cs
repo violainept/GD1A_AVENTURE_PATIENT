@@ -13,6 +13,8 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    public bool canMove = true;
+
 
     private void Awake()
     {
@@ -28,7 +30,10 @@ public class PlayerMovements : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (canMove == true)
+        {
+            Move();
+        }
     }
 
     private void Move() // Player movements
