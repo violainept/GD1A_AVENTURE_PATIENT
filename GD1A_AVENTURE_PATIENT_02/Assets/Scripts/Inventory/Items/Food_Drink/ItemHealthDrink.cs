@@ -9,7 +9,7 @@ public class ItemHealthDrink : InventoryItem
     public float HealthValue;
     public float ManaValue;
 
-    public override bool UseItem()
+    public override bool UseItem() // When used, restore health and mana with the chosen amount (if it's possible)
     {
         if (GameManager.Instance.Player.PlayerHealth.CanRestoreHealth() && GameManager.Instance.Player.PlayerMana.CanRecoverMana() )
         {

@@ -8,9 +8,9 @@ public class ItemHealthFood : InventoryItem
     [Header("Configurations")]
     public float HealthValue;
 
-    public override bool UseItem()
+    public override bool UseItem() // When used, restore health with the chosen amount (if it's possible)
     {
-        if (GameManager.Instance.Player.PlayerHealth.CanRestoreHealth()) // If Player is able to use the Item
+        if (GameManager.Instance.Player.PlayerHealth.CanRestoreHealth())
         {
             GameManager.Instance.Player.PlayerHealth.RestoreHealth(HealthValue);
             return true;

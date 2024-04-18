@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-
     [Header("Configurations")]
+    [SerializeField] private Weapon initalWeapon;
+    [SerializeField] private Transform[] attackPosition;
+
     private PlayerMovements playerMovements;
     private PlayerAnimations playerAnimations;
     private EnemyBrain enemyTarget;
@@ -22,21 +24,21 @@ public class PlayerAttack : MonoBehaviour
     {
         Attack();
     }
-    private void OnEnable()
+    private void OnEnable() // Enemy selected
     {
         playerMovements.canMove = true;
         SelectionManager.OnEnemySelectedEvent += EnemySelectedCallback;
         SelectionManager.OnNoSelectionEvent += NoEnemySelectionCallback;
     }
 
-    private void OnDisable()
+    private void OnDisable() // Enemy not selected
     {
         playerMovements.canMove = false;
         SelectionManager.OnEnemySelectedEvent -= EnemySelectedCallback;
         SelectionManager.OnNoSelectionEvent -= NoEnemySelectionCallback;
     }
 
-    private void Attack()
+    private void Attack() // Attack
     {
         if (enemyTarget == null)
         {
@@ -50,19 +52,19 @@ public class PlayerAttack : MonoBehaviour
        attackCoroutine = StartCoroutine(IEAttack());
     }
 
-    private IEnumerator IEAttack() // Plays attack animation, freeze player and stop animation
+    private IEnumerator IEAttack() // Timer animations
     {
         playerAnimations.SetAttackAnimation(true);
         yield return new WaitForSeconds(0.5f);
         playerAnimations.SetAttackAnimation(false);
     }
 
-    private void EnemySelectedCallback(EnemyBrain enemySelected)
+    private void EnemySelectedCallback(EnemyBrain enemySelected) // When Enemy is selected
     {
         enemyTarget = enemySelected;
     }
 
-    private void NoEnemySelectionCallback()
+    private void NoEnemySelectionCallback() // When no Enemy is selected
     {
         enemyTarget = null;
     }

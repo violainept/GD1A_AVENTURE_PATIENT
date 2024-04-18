@@ -23,7 +23,7 @@ public class SelectionManager : MonoBehaviour
         SelectEnemy();
     }
 
-    private void SelectEnemy()
+    private void SelectEnemy() // Can select an enemy when left click on it
     {
         if (Input.GetMouseButtonDown(0))
         {

@@ -9,12 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStats stats;
 
     public int previousSceneIndex;
-    public PlayerStats Stats => stats; // Allows to use Player stats
-
-    // A retirer
-    [Header("Test")]
-    public ItemHealthFood HealthFood;
-    public ItemHealthDrink HealthDrink;
+    public PlayerStats Stats => stats;
 
     public PlayerMana PlayerMana { get; private set; }
     public PlayerHealth PlayerHealth { get; private set; }
@@ -28,28 +23,13 @@ public class Player : MonoBehaviour
         animations = GetComponent<PlayerAnimations>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (HealthFood.UseItem())
-            {
-                Debug.Log("Using Food.");
-            }
-
-            if (HealthDrink.UseItem())
-            {
-                Debug.Log("Using Drink.");
-            }
-        }
-    }
-    public void ResetPlayer() // Reset all stats
+    public void ResetPlayer() // Reset all Player stats (HP, PM)
     {
         stats.ResetPlayer();
         animations.ResetPlayer();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) // Keeps the BuildIndex of the previous scene
+    public void OnTriggerEnter2D(Collider2D collision) // Keep the BuildIndex of the previous scene
     {
         if (collision.CompareTag("LoadIndex"))
         {

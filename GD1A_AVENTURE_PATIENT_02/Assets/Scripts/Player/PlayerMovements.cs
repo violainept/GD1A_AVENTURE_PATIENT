@@ -42,7 +42,7 @@ public class PlayerMovements : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    private void ReadMovement()
+    private void ReadMovement() // All axis where Player can move (horizontal & vertical)
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
