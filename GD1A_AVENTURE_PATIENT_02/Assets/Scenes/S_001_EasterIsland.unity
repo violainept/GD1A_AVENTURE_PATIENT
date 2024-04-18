@@ -510,6 +510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 11101cc88189ef942bf3b90fd8e2ab2b, type: 2}
   previousSceneIndex: 0
+  HealthFood: {fileID: 0}
+  HealthDrink: {fileID: 0}
 --- !u!95 &386793805
 Animator:
   serializedVersion: 5
@@ -2488,9 +2490,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 583311799}
     m_Modifications:
+    - target: {fileID: 391854188492022274, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136347141426916754, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
+      propertyPath: states.Array.data[1].Transitions.Array.data[0].FalseState
+      value: Patrol
+      objectReference: {fileID: 0}
     - target: {fileID: 5279779671010848986, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
       propertyPath: m_Name
       value: Enemy_Beast(Patrol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670626056791000781, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
+      propertyPath: chaseSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6822283392868479449, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2545,6 +2559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 583311799}
     m_Modifications:
+    - target: {fileID: 599518535919633469, guid: 1c9e5c7223f0f784a922507d9eca3014, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 7943675254635506416, guid: 1c9e5c7223f0f784a922507d9eca3014, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.83

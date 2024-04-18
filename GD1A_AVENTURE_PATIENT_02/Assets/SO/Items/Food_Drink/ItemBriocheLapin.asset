@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ea091f227e97d4fbc5aa8eef924b33, type: 3}
-  m_Name: ItemWeapon_Book
+  m_Script: {fileID: 11500000, guid: bb6683be6a3d1304a90021d66eb033ef, type: 3}
+  m_Name: ItemBriocheLapin
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  ID: Weapon Book
-  Name: Magic Book
-  Description: A magical book that shoots fireballs
-  itemType: 0
-  isConsumable: 0
-  isStackable: 0
-  MaxStack: 1
+  ID: BriocheLapin
+  Name: Brioche Lapin
+  Description: "Une d\xE9licieuse brioche sortie du four en forme de lapin.\nDonne
+    5 PV."
+  itemType: 1
+  isConsumable: 1
+  isStackable: 1
+  MaxStack: 10
   Quantity: 0
-  weapon: {fileID: 0}
+  HealthValue: 5

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemHealthPotion", menuName = "Items/Health Potion")]
-public class ItemHealthPotion : InventoryItem
+[CreateAssetMenu(fileName = "ItemHealthFood", menuName = "Items/Health Food")]
+public class ItemHealthFood : InventoryItem
 {
     [Header("Configurations")]
     public float HealthValue;

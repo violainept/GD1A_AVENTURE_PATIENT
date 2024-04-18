@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6683be6a3d1304a90021d66eb033ef, type: 3}
+  m_Name: ItemTarteCitrouille
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  ID: TarteCitrouille
+  Name: Tarte Citrouille
+  Description: "Une part de tarte \xE0 la citrouille maison. \nDonne 10 PV."
+  itemType: 1
+  isConsumable: 1
+  isStackable: 1
+  MaxStack: 10
+  Quantity: 0
+  HealthValue: 10

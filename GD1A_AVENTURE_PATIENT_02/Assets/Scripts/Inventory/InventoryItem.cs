@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ItemType
 {
     Weapon,
-    Potion,
+    Food,
+    Drink,
     Scroll,
     Ingredients,
     Treasure
@@ -27,7 +28,6 @@ public class InventoryItem : ScriptableObject
     public int MaxStack;
 
     [HideInInspector] public int Quantity;
-
     public InventoryItem CopyItem()
     {
         InventoryItem instance = Instantiate(this);

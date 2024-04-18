@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43436650f62e6de42a4d260da5fc46f7, type: 3}
+  m_Name: ItemThePommeCannelle
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  ID: ThePommeCannelle
+  Name: "Th\xE9 Pomme Cannelle"
+  Description: "Une fiole contenant un th\xE9 aux ar\xF4mes de pommes et cannelles,
+    sp\xE9cialit\xE9 d'Halloween.\nDonne 15 PV et 15 PM."
+  itemType: 2
+  isConsumable: 1
+  isStackable: 1
+  MaxStack: 10
+  Quantity: 0
+  HealthValue: 10
+  ManaValue: 15
