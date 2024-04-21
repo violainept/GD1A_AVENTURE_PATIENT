@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 386793809}
   - component: {fileID: 386793808}
   - component: {fileID: 386793807}
-  - component: {fileID: 386793806}
+  - component: {fileID: 386793811}
   - component: {fileID: 386793805}
   - component: {fileID: 386793804}
   - component: {fileID: 386793803}
@@ -435,8 +435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 11101cc88189ef942bf3b90fd8e2ab2b, type: 2}
   previousSceneIndex: 0
-  HealthFood: {fileID: 0}
-  HealthDrink: {fileID: 0}
 --- !u!95 &386793805
 Animator:
   serializedVersion: 5
@@ -458,41 +456,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &386793806
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386793798}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!50 &386793807
 Rigidbody2D:
   serializedVersion: 4
@@ -561,7 +524,7 @@ SpriteRenderer:
   m_SortingLayerID: -1708797017
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1546907172, guid: 494c81e87368b1a428001c754d973e49, type: 3}
+  m_Sprite: {fileID: 1882650425, guid: 5f094b03b5dbcf0469b81dcb931913ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -605,6 +568,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initalWeapon: {fileID: 0}
   attackPosition: []
+--- !u!70 &386793811
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386793798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01764512, y: -0.038230658}
+  m_Size: {x: 1.1583576, y: 2.8898187}
+  m_Direction: 0
 --- !u!1 &389741780
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +762,7 @@ Transform:
   m_GameObject: {fileID: 471593486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.183, y: 0.513, z: 0}
+  m_LocalPosition: {x: 0.025, y: 1.389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1066,7 +1064,7 @@ Transform:
   m_GameObject: {fileID: 955318239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.197, y: -0.672, z: 0}
+  m_LocalPosition: {x: 0.054, y: -1.698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1455,7 +1453,7 @@ Transform:
   m_GameObject: {fileID: 1482516024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.715, y: -0.302, z: 0}
+  m_LocalPosition: {x: -0.57, y: -0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1569,7 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 386793798}
-  timeOffset: 0.1
+  timeOffset: 0
   posOffset: {x: 0, y: 0, z: -10}
 --- !u!20 &1508460391
 Camera:
@@ -1848,11 +1846,9 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 11101cc88189ef942bf3b90fd8e2ab2b, type: 2}
   healthBar: {fileID: 671962315}
   manaBar: {fileID: 1321721102}
-  expBar: {fileID: 0}
   levelTMP: {fileID: 389741782}
   healthTMP: {fileID: 1481825652}
   manaTMP: {fileID: 2032219551}
-  expTMP: {fileID: 0}
 --- !u!1 &2019291264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2111,7 @@ Transform:
   m_GameObject: {fileID: 2071513110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.647, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0.617, y: -0.258, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2139,7 +2135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279779671010848986, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
       propertyPath: m_Name
-      value: Enemy_Beast(Patrol)
+      value: Enemy_Candy(Patrol)
       objectReference: {fileID: 0}
     - target: {fileID: 6670626056791000781, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
       propertyPath: chaseSpeed
@@ -2185,6 +2181,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7567572904460349036, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 254499112, guid: 119c1a12f49d4824aa808b0076e6e0a5, type: 3}
+    - target: {fileID: 8012285518031069706, guid: 2d8ad5fc7efe6624cabd3053400a0abe, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: d5e4b754b54696949bf2ca5e1a61d480, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
