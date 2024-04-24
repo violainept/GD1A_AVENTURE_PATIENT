@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Image manaBar;
 
     [Header("Text")]
-    [SerializeField] private TextMeshProUGUI levelTMP;
     [SerializeField] private TextMeshProUGUI healthTMP;
     [SerializeField] private TextMeshProUGUI manaTMP;
 
@@ -23,12 +22,11 @@ public class UIManager : MonoBehaviour
         UpdatePlayerUI();
     }
 
-    private void UpdatePlayerUI()
+    private void UpdatePlayerUI() // change the amount of each bar and text
     {
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, stats.Health / stats.MaxHealth, 10f * Time.deltaTime);
         manaBar.fillAmount = Mathf.Lerp(manaBar.fillAmount, stats.Mana / stats.MaxMana, 10f * Time.deltaTime);
 
-        levelTMP.text = $"Level {stats.Level}";
         healthTMP.text = $" {stats.Health}/{stats.MaxHealth}";
         manaTMP.text = $" {stats.Mana}/{stats.MaxMana}";
     }

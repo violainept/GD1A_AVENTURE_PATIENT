@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69729e37f70fc4c4c92575008c7b1c7e, type: 3}
-  m_Name: ItemExtra_Scroll Fire
+  m_Name: ItemExtra_CleChat
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  ID: ScrollFire
-  Name: Scroll Fire
-  Description: 
-  itemType: 0
+  ID: GrandeCleChat
+  Name: "Grande cl\xE9 chat"
+  Description: "Une cl\xE9 ros\xE9e prenant la forme d'un chat avec un oeil rouge
+    en son milieu."
+  itemType: 3
   isConsumable: 0
   isStackable: 0
-  MaxStack: 0
+  MaxStack: 1
   Quantity: 0

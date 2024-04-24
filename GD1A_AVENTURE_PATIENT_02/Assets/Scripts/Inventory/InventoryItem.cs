@@ -7,8 +7,6 @@ public enum ItemType
     Weapon,
     Food,
     Drink,
-    Scroll,
-    Ingredients,
     Treasure
 }
 

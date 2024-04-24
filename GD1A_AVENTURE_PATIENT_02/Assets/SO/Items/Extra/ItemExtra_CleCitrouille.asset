@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69729e37f70fc4c4c92575008c7b1c7e, type: 3}
-  m_Name: ItemExtra_GoldKey
+  m_Name: ItemExtra_CleCitrouille
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  ID: 
-  Name: 
-  Description: 
-  itemType: 0
+  ID: PetiteCleCitrouille
+  Name: "Petite cl\xE9 citrouille"
+  Description: "Une cl\xE9 dor\xE9e prenant la forme d'une citrouille."
+  itemType: 3
   isConsumable: 0
   isStackable: 0
-  MaxStack: 0
+  MaxStack: 1
   Quantity: 0
