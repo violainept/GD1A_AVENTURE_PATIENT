@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 391854188492022274}
   - component: {fileID: 8012285518031069706}
   - component: {fileID: 5323717338842435450}
+  - component: {fileID: 6097718813123780625}
   - component: {fileID: 5136347141426916754}
-  - component: {fileID: 3735986355228871573}
+  - component: {fileID: 4897047392418071335}
   - component: {fileID: 4459962607363090127}
   - component: {fileID: 9175110980880754063}
+  - component: {fileID: 3735986355228871573}
   - component: {fileID: 6670626056791000781}
   - component: {fileID: 4298432971860644453}
-  - component: {fileID: 6097718813123780625}
   m_Layer: 6
   m_Name: Enemy_Beast(Patrol)
   m_TagString: Enemy
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 116578085
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: -174373105, guid: 757e6f07351598c4588c81b364d905e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -196,6 +197,19 @@ MonoBehaviour:
   - {x: 4, y: 0, z: 0}
   - {x: 4, y: -2, z: 0}
   - {x: 1, y: -2, z: 0}
+--- !u!114 &6097718813123780625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279779671010848986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da22f7b9c7de88949889f3c7484c0cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectorSprite: {fileID: 5930550069303710492}
 --- !u!114 &5136347141426916754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +248,7 @@ MonoBehaviour:
     - Decision: {fileID: 9175110980880754063}
       TrueState: 
       FalseState: Chase
---- !u!114 &3735986355228871573
+--- !u!114 &4897047392418071335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,10 +257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5279779671010848986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff41a7554e215824faa63793a82fc4af, type: 3}
+  m_Script: {fileID: 11500000, guid: 97b14c96fb50f7f4d98f91e0b1e77e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  health: 0
 --- !u!114 &4459962607363090127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +293,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &3735986355228871573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279779671010848986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41a7554e215824faa63793a82fc4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
 --- !u!114 &6670626056791000781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,19 +333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   timeBetweenAttacks: 1
---- !u!114 &6097718813123780625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5279779671010848986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da22f7b9c7de88949889f3c7484c0cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectorSprite: {fileID: 5930550069303710492}
 --- !u!1 &5930550069303710492
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +404,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 116578085
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3a24781e20f4f14a8723246cb0e1a58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

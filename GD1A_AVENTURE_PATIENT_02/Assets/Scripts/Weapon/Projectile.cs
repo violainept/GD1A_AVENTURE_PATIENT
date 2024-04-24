@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
 
     public Vector3 Direction { get; set; }
+    public float Damage { get; set; }
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision");
+        other.GetComponent<IDamageable>()?.TakeDamage(Damage); // if it's not null, take damage
+        Destroy(gameObject);
     }
 }

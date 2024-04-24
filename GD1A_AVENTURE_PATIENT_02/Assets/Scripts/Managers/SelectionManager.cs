@@ -31,14 +31,22 @@ public class SelectionManager : MonoBehaviour
             if (hit.collider != null)
             {
                 EnemyBrain enemy = hit.collider.GetComponent<EnemyBrain>();
-                if (enemy != null)
+                if (enemy == null)
                 {
-                    OnEnemySelectedEvent?.Invoke(enemy);
+                    return;
+
                 }
-                else
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                if (enemyHealth.CurrentHealth <= 0f)
                 {
-                    OnNoSelectionEvent?.Invoke();
+                    return;
                 }
+                OnEnemySelectedEvent?.Invoke(enemy);
+            }
+
+            else
+            {
+                OnNoSelectionEvent?.Invoke();
             }
         }
     }

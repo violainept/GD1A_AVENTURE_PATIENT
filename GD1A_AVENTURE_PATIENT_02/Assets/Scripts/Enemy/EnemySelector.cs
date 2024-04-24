@@ -26,7 +26,7 @@ public class EnemySelector : MonoBehaviour
         }
     }
 
-    private void NoSelectionCallBack() // If Player doesn't click on an enemy
+    public void NoSelectionCallBack() // If Player doesn't click on an enemy
     {
         selectorSprite.SetActive(false);
     }

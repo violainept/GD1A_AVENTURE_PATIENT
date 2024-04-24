@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
 
     public int previousSceneIndex;
     public PlayerStats Stats => stats;
-
     public PlayerMana PlayerMana { get; private set; }
     public PlayerHealth PlayerHealth { get; private set; }
 
@@ -27,6 +26,7 @@ public class Player : MonoBehaviour
     {
         stats.ResetPlayer();
         animations.ResetPlayer();
+        PlayerMana.ResetMana();
     }
 
     public void OnTriggerEnter2D(Collider2D collision) // Keep the BuildIndex of the previous scene
