@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Diana_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d77f8c9db595143a761bf85f74fd0c
+      internalID: 1624082440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 896
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bba4dbd3a0413b4d84a9c938451916c
+      internalID: -1727642836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 896
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33eab265ecd509d43b60048c036cef9c
+      internalID: -77582450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 896
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397014cb936e5e64e91faaee5eacafbc
+      internalID: -508608723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15884e0586679e64590a64378da8d9fc
+      internalID: 1022644172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 448
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585c16b7151281a4e8337ed6c5f1d151
+      internalID: 57873818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 448
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18857da5dc93bd4d9a4ab83de122eee
+      internalID: -440973105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 448
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e456057a8083944b74a1f5d6b16a31
+      internalID: -1817053847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4764c60b391f5aa44b0a6bac9711812f
+      internalID: 1546901706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1260bca8a829e524e9da6fbac85675a4
+      internalID: 1707869485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc82865e25809fd4a9136a1360f4b297
+      internalID: 233604829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diana_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 203.75
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699352871547e1547a8a4a0c8f439bf8
+      internalID: 1739751596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +371,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Diana_Walk_0: 1624082440
+      Diana_Walk_1: -1727642836
+      Diana_Walk_10: 233604829
+      Diana_Walk_11: 1739751596
+      Diana_Walk_2: -77582450
+      Diana_Walk_3: -508608723
+      Diana_Walk_4: 1022644172
+      Diana_Walk_5: 57873818
+      Diana_Walk_6: -440973105
+      Diana_Walk_7: -1817053847
+      Diana_Walk_8: 1546901706
+      Diana_Walk_9: 1707869485
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43436650f62e6de42a4d260da5fc46f7, type: 3}
   m_Name: ItemThePommeCannelle
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: -1951714543, guid: 7f970ce4ea23d3a43aac789b243ccf67, type: 3}
   ID: ThePommeCannelle
   Name: "Th\xE9 Pomme Cannelle"
   Description: "Une fiole contenant un th\xE9 aux ar\xF4mes de pommes et cannelles,

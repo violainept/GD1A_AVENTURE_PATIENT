@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6683be6a3d1304a90021d66eb033ef, type: 3}
   m_Name: ItemPainEpices
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 683615608, guid: 7f970ce4ea23d3a43aac789b243ccf67, type: 3}
   ID: PainEpices
   Name: "Pain d'\xE9pices"
   Description: "Un petit bonhomme au pain d'\xE9pices \xE0 la forme familiaire.\nDonne

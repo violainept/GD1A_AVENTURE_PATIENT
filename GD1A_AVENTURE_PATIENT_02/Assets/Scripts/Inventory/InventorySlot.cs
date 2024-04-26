@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 public class InventorySlot : MonoBehaviour
 {
-
-
     [Header ("Configurations")]
     [SerializeField] private Image itemIcon;
     [SerializeField] private Image quantityContainer;
@@ -23,6 +21,6 @@ public class InventorySlot : MonoBehaviour
     public void ShowSlotInformation(bool value)
     {
         itemIcon.gameObject.SetActive(value);
-        quantityContainer.gameObject.SetActive(false);
+        quantityContainer.gameObject.SetActive(value);
     }
 }

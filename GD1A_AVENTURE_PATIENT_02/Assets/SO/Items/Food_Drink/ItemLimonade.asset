@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43436650f62e6de42a4d260da5fc46f7, type: 3}
   m_Name: ItemLimonade
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 1362751037, guid: 7f970ce4ea23d3a43aac789b243ccf67, type: 3}
   ID: Limonade
   Name: Limonade
   Description: "Une limonade fra\xEEche, parfaite pour les jours chauds. \nDonne

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6683be6a3d1304a90021d66eb033ef, type: 3}
   m_Name: ItemTarteCitrouille
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: -1342471567, guid: 7f970ce4ea23d3a43aac789b243ccf67, type: 3}
   ID: TarteCitrouille
   Name: Tarte Citrouille
   Description: "Une part de tarte \xE0 la citrouille maison. \nDonne 10 PV."

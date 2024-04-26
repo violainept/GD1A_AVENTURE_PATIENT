@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35dc0856d7b4554eb1113479dcaa3ae, type: 3}
   m_Name: Weapon_HarvestOfSouls
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 1093067143, guid: 0eaf16df1a48b724aaeb5b659305cf41, type: 3}
   WeaponType: 1
   Damage: 4
   ProjectilePrefab: {fileID: 0}

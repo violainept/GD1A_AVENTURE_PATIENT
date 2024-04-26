@@ -10,6 +10,7 @@ public class PlayerMovements : MonoBehaviour
 
     public Vector2 moveDirection => movement;
 
+    private PlayerActions actions;
     private Player player;
     private PlayerAnimations playerAnimations;
     private Rigidbody2D rb;

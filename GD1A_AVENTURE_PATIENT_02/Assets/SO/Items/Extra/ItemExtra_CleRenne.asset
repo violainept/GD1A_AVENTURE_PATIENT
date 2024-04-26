@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69729e37f70fc4c4c92575008c7b1c7e, type: 3}
   m_Name: ItemExtra_CleRenne
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 1442439260, guid: 4164cf01835d35a4697c54ab23b8f0c1, type: 3}
   ID: GrandeCleRenne
   Name: GrandeCleRenne
   Description: "Une cl\xE9 argent\xE9e prenant la forme d'un renne avec un nez vert."
