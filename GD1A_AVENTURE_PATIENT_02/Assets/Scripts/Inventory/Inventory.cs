@@ -53,7 +53,7 @@ public class Inventory : MonoBehaviour
                     InventoryUI.Instance.DrawItem(inventoryItems[index], index);
                 }
             }
-            int quantityToAdd = quantity > item.MaxStack ? item.MaxStack : quantity; // if quantityToAdd is true = item.MaxStack, if it's false quantityToAdd = quantity
+            int quantityToAdd = quantity > item.MaxStack ? item.MaxStack : quantity; // if it's true quantityToAdd = item.MaxStack, if it's false quantityToAdd = quantity
             AddItemFreeSlot(item, quantityToAdd);
             int remainingAmount = quantity - quantityToAdd;
             if (remainingAmount > 0)
