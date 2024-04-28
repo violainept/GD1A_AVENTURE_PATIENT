@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/S_000_Menu.unity
     guid: 589b73c480acb9549945d01da215c57a
   - enabled: 1
+    path: Assets/Scenes/S_001_EasterIsland.unity
+    guid: e37b2464f05d3544e82c18b0f9fe02b5
+  - enabled: 1
+    path: Assets/Scenes/S_002_HalloweenIsland.unity
+    guid: 7a0cfaa32b2ca224980ba519f5973cb5
+  - enabled: 1
+    path: Assets/Scenes/S_003_ChristmasIsland.unity
+    guid: d29cd7b1a4ef67d479831fd9b485439c
+  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: a82963fbb05815c41aa0e27ad88034c6
   m_configObjects: {}
